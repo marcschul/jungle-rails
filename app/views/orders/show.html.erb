@@ -4,10 +4,13 @@
     <h1>Order #<%= @order.id %></h1>
   </header>
 
-  <div class="order-summary jumbotron">
-    <h4>Thank you for your order!</h4>
+  <div class="alert alert-success" role="alert">
+    <h4>Thank you for your order! <b><%= @order.email %></b></h4>
   </div>
+  
+  <%= render 'line_items' %>
 
   <%= link_to "Continue Shopping", root_path, class: 'btn btn-lg btn-primary' %>
+
 
 </section>
