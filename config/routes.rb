@@ -1,18 +1,31 @@
 Rails.application.routes.draw do
 
+  # Root
   root to: 'products#index'
 
+  # Resources
   resources :products, only: [:index, :show]
   resources :categories, only: [:show]
   resources :about, only: [:index]
+  resources :orders, only: [:create, :show]
+  resources :users, only: [:create, :new]
+  resources :sessions, only: [:create, :new, :destroy]
 
+  # Users Signup, Log-in/out endpoints
+  get '/signup' => 'users#new'
+  post '/users' => 'users#create'
+  
+  get '/login' => 'sessions#new'
+  post '/login' => 'sessions#create'
+  get '/logout' => 'sessions#destroy'
+
+  # Shopping Cart Resource
   resource :cart, only: [:show] do
     post   :add_item
     post   :remove_item
   end
 
-  resources :orders, only: [:create, :show]
-
+  # Admin
   namespace :admin do
     root to: 'dashboard#show'
     resources :products, except: [:edit, :update, :show]

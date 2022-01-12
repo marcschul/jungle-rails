@@ -26,6 +26,23 @@ Use Credit Card # 4111 1111 1111 1111 for testing success scenarios.
 
 More information in their docs: <https://stripe.com/docs/testing#cards>
 
+# User filter pages
+Use the `before_filter :authorize` before your paths to filter pages the require a login
+```ruby
+class exampleController < ApplicationController
+
+  before_filter :authorize
+
+  # example paths
+  def index
+  end
+
+  def new
+  end
+
+end
+```
+
 ## Dependencies
 
 * Rails 4.2 [Rails Guide](http://guides.rubyonrails.org/v4.2/)
