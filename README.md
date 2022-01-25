@@ -48,3 +48,6 @@ end
 * Rails 4.2 [Rails Guide](http://guides.rubyonrails.org/v4.2/)
 * PostgreSQL 9.x
 * Stripe
+
+## Nodejs version
+* This project is intended to run on `node v10.16.1`, some features/tests will not work on different versions of nodejs.
