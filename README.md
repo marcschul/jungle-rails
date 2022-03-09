@@ -2,6 +2,11 @@
 
 A mini e-commerce application built with Rails 4.2 for purposes of teaching Rails by example.
 
+## Home View
+!["Screenshot of Home Page page"](https://github.com/marcschul/jungle-rails/blob/master/public/images/home-720.png?raw=true)
+## Admin View
+!["Screenshot of Admin page"](https://github.com/marcschul/jungle-rails/blob/master/public/images/admin-720.png?raw=true)
+
 ## Additional Steps for Apple M1 Machines
 
 1. Make sure that you are runnning Ruby 2.6.6 (`ruby -v`)
